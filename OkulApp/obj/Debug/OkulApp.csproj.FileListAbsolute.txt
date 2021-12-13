@@ -1,0 +1,9 @@
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\bin\Debug\OkulApp.exe.config
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\bin\Debug\OkulApp.exe
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\bin\Debug\OkulApp.pdb
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\obj\Debug\OkulApp.csprojAssemblyReference.cache
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\obj\Debug\OkulApp.Form1.resources
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\obj\Debug\OkulApp.Properties.Resources.resources
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\obj\Debug\OkulApp.csproj.GenerateResource.cache
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\obj\Debug\OkulApp.exe
+C:\Users\LAB-PC\source\repos\OkulApp\OkulApp\obj\Debug\OkulApp.pdb
