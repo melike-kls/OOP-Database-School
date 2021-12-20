@@ -38,7 +38,7 @@ namespace OkulApp
             {
                 cn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Okul2;Integrated Security=true;");
                 cn.Open();
-                SqlCommand cmd = new SqlCommand($"Insert into Ogrenci (Ad,Soyad,Numara,SinifId) values('{txtAd.Text}','{txtSoyad.Text}',{txtNumara.Text},{cmbSinif.Text})", cn);
+                SqlCommand cmd = new SqlCommand($"Insert into Ogrenci (Ad,Soyad,Numara,SinifId) values('{txtAd.Text}','{txtSoyad.Text}',{txtNumara.Text},{cmbSinif.SelectedValue})", cn);
                 //cmd.ExecuteNonQuery();
 
                 int sonuc = cmd.ExecuteNonQuery();
@@ -47,7 +47,6 @@ namespace OkulApp
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -87,10 +86,7 @@ namespace OkulApp
                 dr.Close();
 
             }
-            catch (SqlException)
-            {
-                MessageBox.Show("Bu Numara Kayıtlı");
-            }
+          
 
             catch (Exception)
             {
@@ -113,8 +109,9 @@ namespace OkulApp
             {
                 cn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Okul2;Integrated Security=true;");
                 cn.Open();
-                SqlCommand cmd = new SqlCommand($"Select SinidId,SinfAd,Kontenjan from tblSinif", cn);
+                SqlCommand cmd = new SqlCommand($"Select SinifId,SinifAd,Kontenjan from Sinif", cn);
                 //cmd.ExecuteNonQuery();
+
 
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -127,12 +124,12 @@ namespace OkulApp
                     snf.SinifAd = dr["SinifAd"].ToString();
                     snf.SinifId = Convert.ToInt32(dr["SinifId"]);
                     lst.Add(snf);
-
                 }
 
-
-                dr.Close();
-
+               dr.Close();
+                cmbSinif.DisplayMember = "SinifAd";
+                cmbSinif.SelectedValue = "SinifId";
+                cmbSinif.DataSource = lst;
             }
             catch (SqlException)
             {
@@ -152,5 +149,7 @@ namespace OkulApp
                 }
             }
         }
+        
+
     }
 }
