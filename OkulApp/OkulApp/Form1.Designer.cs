@@ -35,8 +35,11 @@
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtNumara = new System.Windows.Forms.TextBox();
-            this.txtSinif = new System.Windows.Forms.TextBox();
             this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnGetir = new System.Windows.Forms.Button();
+            this.lblNo = new System.Windows.Forms.Label();
+            this.txtNO = new System.Windows.Forms.TextBox();
+            this.cmbSinif = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblAd
@@ -69,11 +72,11 @@
             // lblSinif
             // 
             this.lblSinif.AutoSize = true;
-            this.lblSinif.Location = new System.Drawing.Point(89, 185);
+            this.lblSinif.Location = new System.Drawing.Point(60, 193);
             this.lblSinif.Name = "lblSinif";
-            this.lblSinif.Size = new System.Drawing.Size(27, 13);
+            this.lblSinif.Size = new System.Drawing.Size(73, 13);
             this.lblSinif.TabIndex = 3;
-            this.lblSinif.Text = "Sınıf";
+            this.lblSinif.Text = "Sınıf Seçiniz : ";
             // 
             // txtAd
             // 
@@ -96,16 +99,9 @@
             this.txtNumara.Size = new System.Drawing.Size(100, 20);
             this.txtNumara.TabIndex = 6;
             // 
-            // txtSinif
-            // 
-            this.txtSinif.Location = new System.Drawing.Point(139, 182);
-            this.txtSinif.Name = "txtSinif";
-            this.txtSinif.Size = new System.Drawing.Size(100, 20);
-            this.txtSinif.TabIndex = 7;
-            // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(154, 219);
+            this.btnKaydet.Location = new System.Drawing.Point(148, 230);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 8;
@@ -113,13 +109,50 @@
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
+            // btnGetir
+            // 
+            this.btnGetir.Location = new System.Drawing.Point(257, 303);
+            this.btnGetir.Name = "btnGetir";
+            this.btnGetir.Size = new System.Drawing.Size(75, 23);
+            this.btnGetir.TabIndex = 9;
+            this.btnGetir.Text = "Getir";
+            this.btnGetir.UseVisualStyleBackColor = true;
+            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
+            // 
+            // lblNo
+            // 
+            this.lblNo.AutoSize = true;
+            this.lblNo.Location = new System.Drawing.Point(75, 308);
+            this.lblNo.Name = "lblNo";
+            this.lblNo.Size = new System.Drawing.Size(52, 13);
+            this.lblNo.TabIndex = 10;
+            this.lblNo.Text = "No Giriniz";
+            // 
+            // txtNO
+            // 
+            this.txtNO.Location = new System.Drawing.Point(139, 305);
+            this.txtNO.Name = "txtNO";
+            this.txtNO.Size = new System.Drawing.Size(100, 20);
+            this.txtNO.TabIndex = 11;
+            // 
+            // cmbSinif
+            // 
+            this.cmbSinif.FormattingEnabled = true;
+            this.cmbSinif.Location = new System.Drawing.Point(139, 190);
+            this.cmbSinif.Name = "cmbSinif";
+            this.cmbSinif.Size = new System.Drawing.Size(100, 21);
+            this.cmbSinif.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 450);
+            this.Controls.Add(this.cmbSinif);
+            this.Controls.Add(this.txtNO);
+            this.Controls.Add(this.lblNo);
+            this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.txtSinif);
             this.Controls.Add(this.txtNumara);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
@@ -129,6 +162,7 @@
             this.Controls.Add(this.lblAd);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,8 +177,11 @@
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtNumara;
-        private System.Windows.Forms.TextBox txtSinif;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnGetir;
+        private System.Windows.Forms.Label lblNo;
+        private System.Windows.Forms.TextBox txtNO;
+        private System.Windows.Forms.ComboBox cmbSinif;
     }
 }
 
